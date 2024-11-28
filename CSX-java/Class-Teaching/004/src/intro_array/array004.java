@@ -30,6 +30,14 @@ public class array004 {
         return total;
     }
 
+    public static int mean(int[] num_data) {
+        int total = 0;
+        for (int num : num_data) {
+            total += num;
+        }
+        return total / num_data.length;
+    }
+
     // This line of code is important
     public static ArrayList<Integer> even(int[] num_data) {
         ArrayList<Integer> evenNumber = new ArrayList<Integer>();
@@ -74,5 +82,6 @@ public class array004 {
         System.out.println("The even number is : " + even(num_data));
         System.out.println("The identify number is : " + identify(num_data));
         System.out.println("The reverse number is : " + reverse(num_data));
+        System.out.println("The mean number is : " + mean(num_data));
     }
 }
