@@ -13,15 +13,14 @@ public class statMiddleVale {
     // mean method
     public static double mean(ArrayList<Integer>[] data) {
     int totalSum = 0;
-    for (int i = 0; i < data.length; i++) {
-        for (Integer num : data[i]) {
-            totalSum += num;
+    int dataLength = 0;
+        for (ArrayList<Integer> datum : data) {
+            for (Integer num : datum) {
+                totalSum += num;
+                dataLength++;
+            }
         }
-    }
-    int dataLength = data.length+1;
-
-    double result = (double) totalSum / dataLength;
-    return result;
+        return (double) totalSum / dataLength;
 }
     // medium method
     public static double medium(ArrayList<Integer> data) {
@@ -41,15 +40,15 @@ public class statMiddleVale {
         int mode = 0;
         for (int i = 0; i < data.size(); i++) {
             int count = 0;
-            for (int j = 0; j < data.size(); j++) {
+             for (int j = 0; j < data.size(); j++) {
                 if (data.get(i) == data.get(j)) {
                     count++;
-                }
-            }
+                };
+             };
             if (count > maxCount) {
                 maxCount = count;
                 mode = data.get(i);
-            }
+            };
         }
         return mode;
     }
