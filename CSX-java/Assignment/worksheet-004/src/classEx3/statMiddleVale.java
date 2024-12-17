@@ -38,13 +38,16 @@ public class statMiddleVale {
     public static int mode(ArrayList<Integer> data) {
         int maxCount = 0;
         int mode = 0;
+        String noMode = "No mode";
         for (int i = 0; i < data.size(); i++) {
             int count = 0;
-             for (int j = 0; j < data.size(); j++) {
-                if (data.get(i) == data.get(j)) {
+            for (Integer datum : data) {
+                if (data.get(i).equals(datum)) {
                     count++;
-                };
-             };
+                }
+                ;
+            }
+            ;
             if (count > maxCount) {
                 maxCount = count;
                 mode = data.get(i);
